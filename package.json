@@ -4,7 +4,6 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
      "start": "node dist/index.js"
   },
   "engines": {
@@ -20,12 +19,5 @@
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "livekit-server-sdk": "^2.13.2"
-  },
-  "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3",
-    "@types/node": "^24.2.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
   }
 }

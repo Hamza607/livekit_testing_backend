@@ -1,7 +1,16 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
     "target": "ES2020",
-    "esModuleInterop": true
-  }
+    "module": "CommonJS",
+    "allowJs": true,                // ✅ Let TS handle .js files
+    "checkJs": false,               // Set to true if you want type-checking in JS
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["**/*.js", "**/*.ts"], // ✅ Include both JS & TS
+  "exclude": ["node_modules", "dist"]
 }

@@ -57,7 +57,7 @@ app.post("/create-room", async (req, res) => {
     const client = new RoomServiceClient(LIVEKIT_URL, API_KEY, API_SECRET);
     const room = await client.createRoom({ name: roomName });
     return res.json({ room });
-  } catch (err: any) {
+  } catch (err) {
     console.error(err);
     return res
       .status(500)
@@ -71,7 +71,7 @@ app.get("/rooms", async (_req, res) => {
     const client = new RoomServiceClient(LIVEKIT_URL, API_KEY, API_SECRET);
     const rooms = await client.listRooms();
     return res.json({ rooms });
-  } catch (err: any) {
+  } catch (err) {
     console.error(err);
     return res.status(500).json({ error: err?.message || "list_rooms_failed" });
   }
